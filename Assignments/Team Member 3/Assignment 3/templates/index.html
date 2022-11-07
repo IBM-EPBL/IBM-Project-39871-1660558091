@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer Care Regietry Demo</title>
+    </head>
+    <body>
+        <marquee><h1>Customer Care Regietry</h1></marquee>
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "39132aa6-dfb5-4a34-a1f9-0de4bf11775b", // The ID of this integration.
+              region: "au-syd", // The region your integration is hosted in.
+              serviceInstanceID: "defdda62-9cb3-4938-ad68-1d8c560a083d", // The ID of your service instance.
+              onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+          </script>
+          <h2>images</h2>
+          {% for row in files % }
+          <div>
+            <h3>{{row.split(".")[0]}}</h3>
+            <img src="https://jrb-bucket04.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{row}}"></div>
+            {% endrow %}
+    </body>
+
+</html>
