@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer care registry demo</title>
+    </head>
+    <body>
+        <marquee><h1>Customer care registry</h1></marquee>
+
+        <script>
+          window.watsonAssistantChatOptions = {
+            integrationID: "fd6b71cd-b3e3-44f5-bd31-ec46d9c859f3", // The ID of this integration.
+            region: "au-syd", // The region your integration is hosted in.
+            serviceInstanceID: "04e7aee5-98ef-4c29-9f6c-e2ba528cdfc3", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
+          };
+          setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+          });
+        </script>
+          <h2>images</h2>
+          <img src="https://jbr-bucket3.s3.us-east.cloud-object-storage.appdomain.cloud/pic-1.jpg" width="450" height="500"><br><br>
+           <img src="https://jbr-bucket3.s3.us-east.cloud-object-storage.appdomain.cloud/pic-2.png" width="450" height="500"><br><br>
+           <img src="https://jbr-bucket3.s3.us-east.cloud-object-storage.appdomain.cloud/pic=3.jpg" width="450" height="500"><br><br>
+           <img src="https://jbr-bucket3.s3.us-east.cloud-object-storage.appdomain.cloud/pic-4.jpg" width="450" height="500"><br><br>
+           <img src="https://jbr-bucket3.s3.us-east.cloud-object-storage.appdomain.cloud/pic-5.jpg" width="450" height="500">
+    </body>
+</html>
